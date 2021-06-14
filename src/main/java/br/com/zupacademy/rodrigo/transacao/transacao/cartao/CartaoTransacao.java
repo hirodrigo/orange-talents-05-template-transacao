@@ -19,6 +19,9 @@ public class CartaoTransacao {
 	@NotBlank
 	private String email;
 
+	/**
+	 * No argument constructor for Hibernate, should not be used.
+	 */
 	@Deprecated
 	public CartaoTransacao() {
 	}

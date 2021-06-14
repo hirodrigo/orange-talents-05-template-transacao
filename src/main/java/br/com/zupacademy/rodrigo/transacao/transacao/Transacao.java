@@ -44,18 +44,37 @@ public class Transacao {
 	@NotNull
 	private LocalDateTime efetivadaEm;
 
+	/**
+	 * No argument constructor for Hibernate, should not be used.
+	 */
 	@Deprecated
 	public Transacao() {
 	}
 
 	public Transacao(@NotBlank String uuid, @NotNull @Positive BigDecimal valor,
-			@NotNull @Valid EstabelecimentoTransacao estabelecimento,
-			@NotNull @Valid CartaoTransacao cartao, @NotNull LocalDateTime efetivadaEm) {
+			@NotNull @Valid EstabelecimentoTransacao estabelecimento, @NotNull @Valid CartaoTransacao cartao,
+			@NotNull LocalDateTime efetivadaEm) {
 		this.uuid = uuid;
 		this.valor = valor;
 		this.estabelecimento = estabelecimento;
 		this.cartao = cartao;
 		this.efetivadaEm = efetivadaEm;
+	}
+
+	public String getUuid() {
+		return uuid;
+	}
+
+	public BigDecimal getValor() {
+		return valor;
+	}
+
+	public EstabelecimentoTransacao getEstabelecimento() {
+		return estabelecimento;
+	}
+
+	public LocalDateTime getEfetivadaEm() {
+		return efetivadaEm;
 	}
 
 }

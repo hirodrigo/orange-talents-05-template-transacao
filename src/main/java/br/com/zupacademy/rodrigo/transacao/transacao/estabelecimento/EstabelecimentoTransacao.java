@@ -22,6 +22,9 @@ public class EstabelecimentoTransacao {
 	@NotBlank
 	private String endereco;
 
+	/**
+	 * No argument constructor for Hibernate, should not be used.
+	 */
 	@Deprecated
 	public EstabelecimentoTransacao() {
 	}
@@ -30,6 +33,18 @@ public class EstabelecimentoTransacao {
 		this.nome = nome;
 		this.cidade = cidade;
 		this.endereco = endereco;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getCidade() {
+		return cidade;
+	}
+
+	public String getEndereco() {
+		return endereco;
 	}
 
 }
